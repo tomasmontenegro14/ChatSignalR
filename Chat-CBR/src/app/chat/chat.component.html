@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let message of messages$ | async">
+    Quien putas fue?  {{message.username}} - Que putas dijo?   {{message.message}}
+  </li>
+</ul>
+<input type="text" name="username" id="username" [(ngModel)]="username">
+<input type="text" name="message" id="message" [(ngModel)]="message">
+<button (click)="enviar()">Enviar</button>
